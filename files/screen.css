@@ -1,0 +1,139 @@
+/*
+ * CSS Design for Checklist Generator
+ * http://www.fam.tuwien.ac.at/~schamane/sysadmin/clg/
+ * by Andreas Schamanek -- http://www.fam.tuwien.ac.at/~schamane/
+ *
+ */
+
+body { background-color: #EEEEEE; color: black;
+	margin-left: 2%; margin-right: 2%;
+	font-family: "Trebuchet MS", Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", sans-serif;
+	font-weight: normal;
+}
+
+a:link    { color: #000066; text-decoration: underline; }
+a:visited { color: #333333; text-decoration: underline; }
+a:active  { color: #990000; text-decoration: underline; }
+a:hover   { color: red;     text-decoration: underline; }
+
+pre     { font-family: monospace; }
+tt      { font-family: monospace; }
+code    { 
+	color: black; background-color: #FFFFFF;
+	padding-left: 0.3em; padding-right: 0.3em;
+}
+
+dt      { color: black; }
+dd      { margin-left: +4%; margin-bottom: 6pt; }
+
+/* page layout elements ----------------------------------------------- */
+
+tt.foot { font-size: 9pt; font-family: monospace; }
+p.foot  { font-size: 10pt; }
+p.foot a {
+	color: black; 
+	text-decoration: none !important;
+	font-weight: bolder;
+}
+
+/* miscellaneous divs and classes -------------------------------------- */
+
+input.tt { font-family: monospace; }
+
+.indent {
+	margin-left: 1.5em;
+}
+
+.code {
+	margin-left: 15px;
+	width: 95%;
+	border: 1px #666666 solid;
+	background: #FFFFFF;
+	padding: 3px 5px 3px 5px;
+	overflow: auto;
+}
+
+/* checklist generator specific -------------------------------------- */
+
+/* checkbox sizes are 22px */
+
+/* left and right margins */
+div#clg_checklist {
+	margin-left:  30px;
+	margin-right: 24px;
+}
+
+div#clg_checklist h1,
+div#clg_checklist h2,
+div#clg_checklist h3 {
+	margin-left:  -26px;
+	margin-right: -10px;
+}
+
+span.checkbox, span.radio {
+	padding-right: 6px;
+	white-space: nowrap;
+}
+span.checkboxtext, span.radiotext {
+	white-space: normal !important;
+}
+
+img.checkbox, img.radio {
+	margin-right: 13px;
+	margin-left: 8px;
+}
+
+p.checkbox, p.radio {
+	margin: 0.1em 1em 0.1em 0;
+	padding-left: 43px;
+	text-indent: -43px;
+}
+
+div.indented {
+	margin-left: 43px; /* margin of img + width of img: 8+13+22 */
+}
+
+/* vertical adjustment of image checkboxes */
+img.checkbox, img.radio { position: relative; top: 4px; }
+/* override for tables */
+td img.checkbox, td img.radio {	top: 0px; }
+
+/* click-able items */
+a.checkbox, a.radio {
+	text-decoration: none !important;
+	color: black;
+}
+
+/* form elements */
+input.inputtextgeneric, input.inputtext {
+	color: black;
+	background-color: transparent; 
+	border: 0; border-bottom: 1px solid #666;
+	font-size: 1em;
+	font-family: arial, sans-serif; 
+	text-indent: 0.2em;
+}
+input.inputtextgeneric:hover, input.inputtext:hover {
+	background-color: #fff; 
+	border-bottom: 1px solid #222;
+}
+
+/* horizontal line */
+hr.clg_hr {
+	border: 0; width: 95%; height: 1px; background-color: black;
+}
+
+/* vertical space */
+div.clg_spacer {
+	height: 0.81em;
+}
+
+/* tables */
+div#clg_checklist td {
+	padding: 0.05em 0.3em 0.05em 0.25em ;
+}
+
+/* cell styles/classes */
+div#clg_checklist td.emph   { background-color: #adaaaa; }
+div#clg_checklist td.center { text-align: center; }
+div#clg_checklist td.right  { text-align: right; }

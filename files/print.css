@@ -1,0 +1,119 @@
+/*
+ * CSS Print Design for Checklist Generator
+ * http://www.fam.tuwien.ac.at/~schamane/sysadmin/clg/
+ * by Andreas Schamanek -- http://www.fam.tuwien.ac.at/~schamane/
+ *
+ */
+
+body {
+	background-color: white; color: black;
+	margin-left: 0%; margin-right: 0%;
+	font-family: "Trebuchet MS", Verdana, "Lucida Sans", Arial, Geneva, Helvetica, Helv, "Myriad Web", sans-serif;
+	font-weight: normal;
+}
+
+.noprint { display: none; }
+
+a:link    { color: navy; text-decoration:underline; }
+a:visited { color: navy; text-decoration:underline; }
+a:active  { color: navy; text-decoration:underline; }
+a:hover   { color: navy; text-decoration:underline; }
+
+pre     { font-family: monospace; }
+tt      { font-family: monospace; }
+
+dt      { color: black; }
+dd      { margin-left: +4%; margin-bottom: 6pt; }
+
+/* page layout elements ----------------------------------------------- */
+
+tt.foot { font-size: 9pt; font-family: monospace; }
+p.foot  { font-size: 10pt; }
+p.foot a {
+	color: black;
+	text-decoration: none !important;
+	font-weight: bolder;
+}
+
+/* miscellaneous divs and classes -------------------------------------- */
+
+input.tt { font-family: monospace; }
+
+.indent {
+	margin-left: 1.5em;
+}
+
+.code {
+	margin-left: 15px;
+	width: 95%;
+	border: 1px #666666 solid;
+	background: #EEEEEE;
+	padding: 3px 5px 3px 5px;
+}
+
+/* checklist generator specific -------------------------------------- */
+
+/* checkbox sizes are 22px */
+
+/* left and right margins */
+div#clg_checklist {
+	margin-left:  30px;
+	margin-right: 24px;
+}
+
+div#clg_checklist h1,
+div#clg_checklist h2,
+div#clg_checklist h3 {
+	margin-left:  -26px;
+	margin-right: -10px;
+}
+
+span.checkbox, span.radio {
+	padding-right: 6px;
+}
+
+img.checkbox, img.radio {
+	margin-right: 13px;
+	margin-left: 8px;
+}
+
+p.checkbox, p.radio {
+	margin: 0.1em 1em 0.1em 0;
+	padding-left: 43px;
+	text-indent: -43px;
+}
+
+div.indented {
+	margin-left: 43px; /* margin of img + width of img: 8+13+22 */
+}
+
+/* vertical adjustment of image checkboxes */
+img.checkbox, img.radio {
+	position: relative;
+	top: 4px;
+}
+
+/* click-able items */
+a.checkbox, a.radio {
+	text-decoration: none !important;
+	color: black;
+}
+
+/* form elements */
+input.inputtextgeneric, input.inputtext {
+	background-color: transparent;
+	border: 0; border-bottom: 1px solid #666;
+	font-size: 1em;
+	font-family: arial, sans-serif;
+	text-indent: 0.2em;
+}
+
+/* horizontal line */
+hr.clg_hr {
+	width: 95%; height: 1px;
+}
+
+/* vertical space */
+div.clg_spacer {
+	height: 0.81em;
+}
